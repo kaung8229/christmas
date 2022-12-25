@@ -1,5 +1,17 @@
 // for first sky section
 
+const overlay = document.querySelector('.overlay');
+const click = document.querySelector('.click');
+const audio = document.getElementById('audio');
+
+click.addEventListener('click',function(){
+    overlay.classList.add('active');
+
+    audio.play();
+})
+
+
+
 // for cloud and santa animation
 const cloud1 = document.getElementById('cloud1');
 const cloud2 = document.getElementById('cloud2');
