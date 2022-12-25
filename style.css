@@ -948,7 +948,7 @@ footer{
     }
     .wishtext {
         font-size: 1.3em;
-        padding: 20px;
+        padding: 0 20px;
     }
     .treetop {
         width: 170%;
@@ -1055,6 +1055,11 @@ footer{
         width: 500px;
         height: 400px;
     }
+    @keyframes bigcircleani{
+        to{
+            transform: translateY(25px);
+        }
+    }
     .footer-text {
         margin-top: 90px;
         padding: 70px;
@@ -1072,7 +1077,7 @@ footer{
         margin-top: 180px;
     }
     .ftree.left {
-        left: -30%;
+        left: -35%;
     }
     .ftree.right {
         left: calc(97% - 100px);
@@ -1093,7 +1098,7 @@ footer{
     .gifticon {
         width: 100px;
         top: 50%;
-        left: calc(50% - 40px);
+        left: calc(50% - 50px);
         z-index: 2;
     }
     /* footer */
