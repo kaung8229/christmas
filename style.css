@@ -869,7 +869,7 @@ footer{
 
     /* for second ground section */
     .groundsection {
-        height: 130vh;
+        height: 100vh;
     }
     .cloundtop {
         margin-top: 0px;
@@ -944,7 +944,7 @@ footer{
 
     /* for third wish section */
     .wishpage {
-        height: 140vh;
+        height: 110vh;
     }
     .wishtext {
         font-size: 1.3em;
@@ -1046,18 +1046,18 @@ footer{
     }
     @keyframes circlegroupani{
         to{
-            transform: translateY(600px);
+            transform: translateY(800px);
         }
     }
     .bigcircle {
         bottom: 0px;
         left: calc(50% - 250px);
         width: 500px;
-        height: 300px;
+        height: 400px;
     }
     .footer-text {
-        margin-top: 60px;
-        padding: 60px;
+        margin-top: 90px;
+        padding: 70px;
     }
     .footertext {
         left: calc(50% - 175px);
@@ -1068,31 +1068,33 @@ footer{
     }
 
     .ftree {
-        width: 200px;
-        margin-top: 100px;
+        width: 250px;
+        margin-top: 180px;
     }
     .ftree.left {
         left: -30%;
     }
     .ftree.right {
-        left: calc(105% - 100px);
+        left: calc(97% - 100px);
     }
     .house {
-        top: 180px;
-        width: 160px;
+        top: 160px;
+        width: 300px;
     }
     .house.left {
-        left: 0%;
+        left: calc(50% - 150px);
         animation-delay: 0.7s;
     }
     .house.right {
-        left: calc(80% - 80px);
-        animation-delay: 1s;
+        /* left: calc(80% - 80px); */
+        /* animation-delay: 1s; */
+        display: none;
     }
     .gifticon {
-        width: 80px;
-        top: 280px;
+        width: 100px;
+        top: 45%;
         left: calc(50% - 40px);
+        z-index: 2;
     }
     /* footer */
 
