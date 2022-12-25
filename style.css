@@ -1,0 +1,1052 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* for colors */
+:root{
+    --skyclr: #dcedff;
+    --skymedium: #b4d9ff;
+    --skydark: #002044;
+
+
+    --bgclr: #0a3f25;
+
+    --ccclr: #1b5f41;
+    --bbclr: #e0b77d;
+    --bdclr: #db6200;
+}
+/* for colors */
+
+/* for first sky section */
+.skysection{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    background-image: radial-gradient(
+        circle at 50% 40%,
+        var(--skyclr) 10%,
+        var(--skymedium) 20%,
+        var(--skydark) 50%
+    );
+
+    overflow: hidden;
+}
+
+/* for moon */
+.moon{
+    position: absolute;
+    top: calc(40% - 175px);
+    left: calc(50% - 175px);
+
+    width: 350px;
+}
+.moon img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* for moon */
+
+/* for cloud */
+.cloud{
+    position: absolute;
+    z-index: 5;
+}
+.pos1{
+    width: 280px;
+    top: 15%;
+    left: 10%;
+}
+.pos2{
+    width: 180px;
+    top: 12%;
+    left: 50%;
+    opacity: 0.8;
+}
+.pos3{
+    width: 400px;
+    top: 20%;
+    left: 80%;   
+}
+/* for cloud */
+
+/* for bigcloud */
+.bigcloud{
+    position: absolute;
+    bottom: -20%;
+    width: 100%;
+
+    z-index: 1;
+}
+.bigcloud img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* for bigcloud */
+
+
+/* for santa */
+.santa{
+    position: absolute;
+    top: calc(50% - 150px);
+    left: 30%;
+
+    width: 300px;
+
+    z-index: 100;
+}
+/* for santa */
+
+
+/* for stars */
+.stars{
+    position: absolute;
+
+    animation-name: starshine;
+    animation-duration: calc(0.3s * var(--i));
+    animation-iteration-count: infinite;
+}
+
+@keyframes starshine{
+    0%,100%{
+        opacity: 0.5;
+    }
+    50%{
+        opacity: 1;
+    }
+}
+
+/* for stars */
+
+/* for first sky section */
+
+
+
+/* for second ground section */
+.groundsection{
+    position: relative;
+    width: 100%;
+    height: 160vh;
+
+    background: var(--skydark);
+
+    overflow: hidden;
+}
+
+.cloundtop{
+    margin-top: -10px;
+    width: 100%;
+}
+
+
+/* for snowstars */
+.snow{
+    position: absolute;
+
+    opacity: 0;
+
+    animation-name: snowstarsani;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: calc(0.05s * var(--i));
+    animation-timing-function: linear;
+}
+.circle{
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+@keyframes snowstarsani{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+        transform: translateY(200px);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(300px);
+    }
+}
+
+/* for snowstars */
+
+
+/* for textcontent */
+.textcontent{
+    position: absolute;
+    top: 400px;
+    right: 150px;
+
+    transform: scale(0);
+
+    /* animation-name: textani; */
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+}
+
+.line{
+    position: absolute;
+
+    width: 200px;
+    height: 2px;
+    background-color: #fff;
+}
+.line.left{
+    top: 55%;
+    left: 130px;
+}
+.line.right{
+    top: 55%;
+    left: 420px;
+}
+
+.text{
+    display: block;
+    filter: invert(1) drop-shadow(0 0 10px #fff);
+    margin: 0 auto;
+}
+.text.tone{
+    width: 750px;
+}
+.text.tstar{
+    position: relative;
+    width: 60px;
+    margin: 10px auto 20px;
+}
+.text.ttwo{
+    width: 450px;
+}
+
+@keyframes textani{
+    to{
+        transform: scale(1);
+    }
+}
+/* for textcontent */
+
+
+/* for snowman */
+.snowman{
+    position: absolute;
+    bottom: -10px;
+    right: 150px;
+
+    width: 350px;
+
+    z-index: 10;
+
+    transform: translateX(500px);
+
+    /* animation: snowmanani; */
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes snowmanani{
+    to{
+        transform: translateX(0);
+    }
+}
+/* for snowman */
+
+
+.christmastree{
+    position: absolute;
+    bottom: 80px;
+    left: 200px;
+
+    width: 450px;
+    filter: drop-shadow(0 0 30px #fff);
+
+    z-index: 10;
+
+    transform: translateX(-800px);
+
+    /* animation: treeani; */
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-fill-mode: forwards;
+}
+
+@keyframes treeani{
+    to{
+        transform: translateX(0);
+    }
+}
+
+
+/* for gifts */
+.gift{
+    position: absolute;
+
+    display: inline-block;
+    width: 150px;
+
+    filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.3));
+
+    z-index: 12;
+
+    transform: translateY(-800px);
+    opacity: 0;
+
+    /* animation-name: giftani; */
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(-0.175, 0.885, 0.32, 1.275);
+    animation-fill-mode: forwards;
+}
+.gift.gone{
+    bottom: 80px;
+    left: 600px;
+    animation-delay: 2.3s;
+}
+.gift.gtwo{
+    bottom: 60px;
+    left: 400px;
+    animation-delay: 2.6s;
+}
+.gift.gthree{
+    bottom: 30px;
+    left: 500px;
+    animation-delay: 2.9s;
+}
+.gift img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes giftani{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* for gifts */
+
+
+/* for ground */
+.winterground{
+    position: absolute;
+    bottom: -30px;
+    width: 100%;
+}
+.winterground img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* for ground */
+
+/* for second ground section */
+
+
+
+/* for third wish section */
+.wishpage{
+    position: relative;
+    width: 100%;
+    height: 170vh;
+    background: var(--bgclr);
+
+    overflow: hidden;
+}
+.treetop{
+    width: 100%;
+    margin-top: -100px;
+}
+
+.wishtext{
+    position: relative;
+    z-index: 100;
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 120px;
+    color: #fff;
+    line-height: 2;
+    text-shadow: 0 0 50px rgba(255,255,255,0.5);
+
+    transform: scale(0);
+
+    /* animation-name: wishani; */
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+@keyframes wishani{
+    to{
+        transform: scale(1);
+    }
+}
+
+
+/* for icons */
+.icons{
+    position: absolute;
+
+    transform: scale(0);
+
+    /* animation-name: iconaniall; */
+    animation-duration: 0.9s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-fill-mode: forwards;
+    animation-delay: calc(0.2s * var(--i));
+}
+.icons:not(.icons.icons.goldenstain1,.icons.goldenstain2){
+    filter: drop-shadow(0 0 30px #fff);
+    
+    z-index: 5;
+}
+.icons.ball1{
+    width: 120px;
+    top: 55%;
+    left: 5%;
+}
+.icons.ball2{
+    width: 120px;
+    top: 65%;
+    left: 90%;
+}
+.icons.candy1{
+    width: 120px;
+    top: 85%;
+    left: calc(50% - 40px);
+
+    transform: rotate(155deg) scale(0);
+
+    /* animation-name: candyani1; */
+    animation-duration: 0.9s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-fill-mode: forwards;
+}
+.icons.candy2{
+    width: 120px;
+    top: 85%;
+    left: calc(50% - 100px);
+
+    transform: rotate(200deg) scale(0);
+
+    /* animation-name: candyani2; */
+    animation-duration: 0.9s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-fill-mode: forwards;
+}
+.icons.envelope{
+    width: 140px;
+    top: 85%;
+    left: 85%;
+}
+.icons.flower{
+    width: 180px;
+    top: 40%;
+    left: 15%;
+}
+.icons.gift1{
+    width: 200px;
+    top: 80%;
+    left: 8%;
+}
+.icons.gift2{
+    width: 200px;
+    top: 40%;
+    left: 80%;
+}
+.icons.star{
+    width: 100px;
+    top: 35%;
+    left: calc(50% - 50px);
+}
+.icons.goldenstain1{
+    width: 400px;
+    top: 30%;
+    left: -5%;
+}
+.icons.goldenstain2{
+    width: 400px;
+    top: 60%;
+    left: 80%;
+}
+
+@keyframes iconaniall{
+    to{
+        transform: scale(1);
+    }
+}
+@keyframes candyani1{
+    to{
+        transform: rotate(155deg) scale(1);
+    }
+}
+@keyframes candyani2{
+    to{
+        transform: rotate(200deg) scale(1);
+    }
+}
+/* for icons */
+
+/* for third wish section */
+
+
+
+
+/* footer */
+footer{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: var(--bgclr);
+
+    overflow: hidden;
+}
+
+.footertree{
+    position: absolute;
+    bottom: -220px;
+    width: 100%;
+
+    transform: rotate(180deg) translateY(-300px);
+
+    z-index: 100;
+
+    /* animation-name: footertreeani; */
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-fill-mode: forwards;
+}
+
+@keyframes footertreeani{
+    to{
+        transform: rotate(180deg) translateY(0);
+    }
+}
+
+
+
+.circlecenter{
+    position: absolute;
+    bottom: -150px;
+    left: calc(50% - 150px);
+
+    width: 300px;
+    height: 300px;
+    background: var(--ccclr);
+    border-radius: 50%;
+
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+
+    z-index: 3;
+}
+.circlecenter::before,
+.circlecenter::after{
+    content: '';
+    position: absolute;
+    top: -100px;
+
+    width: 500px;
+    height: 500px;
+    background: var(--ccclr);
+    border-radius: 50%;
+
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+
+    z-index: 5;
+}
+.circlecenter::before{
+    left: -250%;
+}
+.circlecenter::after{
+    left: 180%;
+}
+
+.circlewhite{
+    position: absolute;
+    bottom: -225px;
+    left: calc(30% - 175px);
+
+    width: 350px;
+    height: 350px;
+    background: #fff;
+    border-radius: 50%;
+
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+
+    z-index: 4;
+}
+.circlewhite::after{
+    content: '';
+    position: absolute;
+    left: calc(100% + 250px);
+
+    width: 350px;
+    height: 350px;
+    background: #fff;
+    border-radius: 50%;
+
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.circle-group{
+    position: relative;
+    transform: translateY(1000px);
+    z-index: 7;
+
+    /* animation-name: circlegroupani; */
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-fill-mode: forwards;
+}
+
+@keyframes circlegroupani{
+    to{
+        transform: translateY(750px);
+    }
+}
+
+.bigcircle{
+    position: absolute;
+    bottom: -300px;
+    left: calc(50% - 500px);
+
+    width: 1000px;
+    height: 700px;
+    border-radius: 50%;
+    background: var(--bbclr);
+    border: 20px solid var(--bdclr);
+    text-align: center;
+
+    z-index: 2;
+
+    transform: translateY(600px);
+
+    /* animation-name: bigcircleani; */
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-fill-mode: forwards;
+}
+
+@keyframes bigcircleani{
+    to{
+        transform: translateY(0);
+    }
+}
+
+.footer-text{
+    position: relative;
+    margin-top: 80px;
+    padding: 100px;
+    transform: scale(0);
+
+    /* animation-name: footertextani; */
+    animation-duration: 1.5s;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation-fill-mode: forwards;
+}
+
+.footer-text h3{
+    font-size: 2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+}
+
+.footertext{
+    position: absolute;
+    top: 0%;
+    left: calc(50% - 250px);
+    filter: invert(1) drop-shadow(0 0 30px #fff);
+
+    width: 500px;
+}
+
+@keyframes footertextani{
+    to{
+        transform: scale(1);
+    }
+}
+
+
+/* for tree */
+.ftree{
+    position: absolute;
+    width: 300px;
+    margin-top: 100px;
+
+    z-index: 2;
+
+    /* animation-name: ftreeani; */
+    animation-duration: 1.5s;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation-fill-mode: forwards;
+}
+.ftree.left{
+    left: 5%;
+
+    transform: translateX(-500px);
+
+    animation-delay: 0s;
+}
+.ftree.right{
+    left: calc(95% - 300px);
+
+    transform: translateX(500px);
+
+    animation-delay: 0.3s;
+}
+
+@keyframes ftreeani{
+    to{
+        transform: translateX(0);
+    }
+}
+
+/* for tree */
+
+
+
+/* for house */
+.house{
+    position: absolute;
+    top: 90px;
+
+    z-index: 1;
+
+    transform: scale(0);
+
+    /* animation-name: houseani; */
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-fill-mode: forwards;
+}
+.house.left{
+    left: 20%;
+
+    animation-delay: 0.7s;
+}
+.house.right{
+    left: calc(80% - 350px);
+
+    animation-delay: 1s;
+}
+
+@keyframes houseani{
+    to{
+        transform: scale(1);
+    }
+}
+
+/* for house */
+
+
+/* for gift icon */
+.gifticon{
+    width: 150px;
+    position: absolute;
+    top: 200px;
+    left: calc(50% - 75px);
+
+    transform: translateY(500px);
+
+    /* animation-name: gifticonani; */
+    animation-duration: 2.3s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-fill-mode: forwards;
+}
+
+@keyframes gifticonani{
+    to{
+        transform: translateY(0);
+    }
+}
+/* for gift icon */
+
+/* footer */
+
+
+
+
+/* Make It Responsive for mobile */
+@media (max-width: 500px){
+
+    /* for first sky section */
+    .moon {
+        top: calc(40% - 100px);
+        left: calc(50% - 100px);
+        width: 200px;
+    }
+    .pos1 {
+        width: 150px;
+    }
+    .pos2 {
+        width: 120px;
+    }
+    .pos3 {
+        width: 200px;
+        left: 60%;
+    }
+    .santa {
+        top: calc(50% - 100px);
+        left: 20%;
+        width: 200px;
+    }
+    .bigcloud {
+        bottom: -8%;
+        width: 150%;
+        margin-left: -25%;
+    }
+    .bigcloud img {
+        object-position: center;
+    }
+    /* for first sky section */
+    
+
+    /* for second ground section */
+    .groundsection {
+        height: 130vh;
+    }
+    .cloundtop {
+        margin-top: 0px;
+        width: 160%;
+    }
+    .snowman {
+        bottom: 30px;
+        right: 0px;
+        width: 180px;
+    }
+    .christmastree {
+        bottom: 80px;
+        left: -30px;
+        width: 250px;
+    }
+    @keyframes treeani{
+        to{
+            transform: translateX(-30px);
+        }
+    }
+    .gift {
+        width: 80px;
+    }
+    .gift.gone {
+        bottom: 30px;
+        left: 30px;
+    }
+    .gift.gtwo {
+        bottom: 40px;
+        left: 130px;
+    }
+    .gift.gthree {
+        bottom: 20px;
+        left: 80px;
+    }
+    .winterground {
+        bottom: -10px;
+        width: 170%;
+    }
+    .textcontent {
+        top: 200px;
+        right: 50%;
+        transform: translateX(50%) scale(0);
+    }
+    @keyframes textani{
+        to{
+            transform: translateX(50%) scale(1);
+        }
+    }
+    .text.tone {
+        width: 350px;
+    }
+    .text.ttwo {
+        width: 250px;
+    }
+    .text.tstar {
+        width: 30px;
+    }
+    .line {
+        width: 100px;
+    }
+    .line.left {
+        top: 51%;
+        left: 40px;
+    }
+    .line.right {
+        top: 51%;
+        left: 200px;
+    }
+    /* for second ground section */
+
+
+    /* for third wish section */
+    .wishpage {
+        height: 140vh;
+    }
+    .wishtext {
+        font-size: 1.3em;
+        padding: 20px;
+    }
+    .treetop {
+        width: 170%;
+        margin-top: 0px;
+    }
+    .icons.gift1 {
+        width: 80px;
+        top: 80%;
+        left: 10%;
+    }
+    .icons.ball1 {
+        width: 50px;
+        top: 67%;
+        left: 0%;
+    }
+    .icons.flower {
+        width: 80px;
+        top: 35%;
+        left: 3%;
+    }
+    .icons.star {
+        width: 80px;
+        top: 30%;
+    }
+    .icons.gift2 {
+        width: 80px;
+        top: 35%;
+        left: 80%;
+    }
+    .icons.ball2 {
+        width: 50px;
+        top: 54%;
+        left: 88%;
+    }
+    .icons.envelope {
+        width: 70px;
+        top: 77%;
+        left: 78%;
+    }
+    .icons.candy1 {
+        width: 70px;
+        top: 85%;
+        left: calc(50% - 0px);
+    }
+    .icons.candy2 {
+        width: 70px;
+        top: 85%;
+        left: calc(50% - 40px);
+    }
+    .icons.goldenstain1 {
+        width: 300px;
+        top: 20%;
+        left: -50%;
+    }
+    .icons.goldenstain2 {
+        width: 300px;
+        top: 50%;
+        left: 60%;
+    }
+    /* for third wish section */
+
+
+    /* footer */
+    .footertree {
+        bottom: -70px;
+        width: 160%;
+    }
+    .circlecenter {
+        bottom: -150px;
+        left: calc(50% - 75px);
+        width: 150px;
+        height: 150px;
+    }
+    .circlecenter::before, .circlecenter::after {
+        top: -100px;
+        width: 200px;
+        height: 200px;
+    }
+    .circlecenter::before {
+        left: -160%;
+    }
+    .circlecenter::after {
+        left: 130%;
+    }
+    .circlewhite {
+        bottom: -130px;
+        left: calc(30% - 100px);
+        width: 150px;
+        height: 150px;
+    }
+    .circlewhite::after {
+        left: calc(100% + 50px);
+        width: 150px;
+        height: 150px;
+    }
+    @keyframes circlegroupani{
+        to{
+            transform: translateY(600px);
+        }
+    }
+    .bigcircle {
+        bottom: 0px;
+        left: calc(50% - 250px);
+        width: 500px;
+        height: 300px;
+    }
+    .footer-text {
+        margin-top: 60px;
+        padding: 60px;
+    }
+    .footertext {
+        left: calc(50% - 175px);
+        width: 350px;
+    }
+    .footer-text h3 {
+        font-size: 1.1em;
+    }
+
+    .ftree {
+        width: 200px;
+        margin-top: 100px;
+    }
+    .ftree.left {
+        left: -30%;
+    }
+    .ftree.right {
+        left: calc(105% - 100px);
+    }
+    .house {
+        top: 180px;
+        width: 160px;
+    }
+    .house.left {
+        left: 0%;
+        animation-delay: 0.7s;
+    }
+    .house.right {
+        left: calc(80% - 80px);
+        animation-delay: 1s;
+    }
+    .gifticon {
+        width: 80px;
+        top: 280px;
+        left: calc(50% - 40px);
+    }
+    /* footer */
+
+}
+
+
+
+
+
+
+
+
+
+
